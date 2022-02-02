@@ -10,7 +10,7 @@ import {
 import DiscordImg from '../../assets/discord.png';
 import { styles } from './styles';
 
-type Props = TouchableOpacityProps & {
+interface Props extends TouchableOpacityProps {
    title: string;   
 }
 
