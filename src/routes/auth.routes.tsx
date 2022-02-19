@@ -8,23 +8,25 @@ import { SignIn } from '../screens/signIn';
 
 const { Navigator, Screen } = createStackNavigator();
 
+export type RootStackParamsList = {
+   SignIn: undefined;
+   Home: undefined;
+}
 
 export function AuthRoutes() {
    const { secondary80, secondary100 } = theme.colors;
    return (
       <Navigator
-              
          screenOptions={{
-                       
             cardStyle: {
                backgroundColor: 'transparent'
-            }            
+            }
          }}
       >
          <Screen
-            name="SignIn"            
+            name="SignIn"
             component={SignIn}
-            options={{ headerShown: false, cardStyle: {backgroundColor: 'transparent' }}}
+            options={{ headerShown: false }}
          />
          <Screen
             name="Home"
